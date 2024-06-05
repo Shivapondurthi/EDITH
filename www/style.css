@@ -203,3 +203,7 @@ body{
   width: auto;
 }
 /* Chat Box Start End*/
+
+.sirimsg{
+  font-size: clamp(28px);
+}
