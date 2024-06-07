@@ -40,10 +40,11 @@ $(document).ready(function () {
 
     // mic button click event
 
-    $(".MicButton").click(function(){
-        eel.play_sound()
-        $("#Oval").attr("hidden", true);
-        $("#SiriWave").attr("hidden", false);
+    $("#micbutton").click(function(){
+        // eel.play_sound()
+        $("#Oval-Section").attr("hidden", true);
+        $("#SiriWave-Section").attr("hidden", false);
+        console.log("printing")
         
     });
 
@@ -65,11 +66,11 @@ $(document).ready(function () {
 
         if (message != "") {
 
-            $("#Oval").attr("hidden", true);
-            $("#SiriWave").attr("hidden", false);
+            $("#Oval-Section").attr("hidden", true);
+            $("#SiriWave-Section").attr("hidden", false);
             eel.allCommands(message);
             $("#chatbox").val("")
-            $("#MicBtn").attr('hidden', false);
+            $("#micbutton").attr('hidden', false);
             $("#SendBtn").attr('hidden', true);
 
         }
@@ -79,11 +80,11 @@ $(document).ready(function () {
     // toogle fucntion to hide and display mic and send button 
     function ShowHideButton(message) {
         if (message.length == 0) {
-            $("#MicBtn").attr('hidden', false);
+            $("#micbutton").attr('hidden', false);
             $("#SendBtn").attr('hidden', true);
         }
         else {
-            $("#MicBtn").attr('hidden', true);
+            $("#micbutton").attr('hidden', true);
             $("#SendBtn").attr('hidden', false);
         }
     }

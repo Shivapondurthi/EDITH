@@ -39,14 +39,13 @@ def takecommand():
         print("Recogining...")
         query=r.recognize_google(audio,language="en-in")
         print(f"user said:{query}")
+        speak(query)
+        eel.DisplayMessage("hello")
     except Exception as e:
         return ""
     
     return query.lower()
 
-
-text=takecommand()
-speak(text)
 
 
 
