@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    $('.text').textillate({
+    $('.heading').textillate({
         loop: true,
         sync: true,
         in: {
@@ -24,7 +24,7 @@ $(document).ready(function () {
       });
 
     // Siri message animation
-    $('.siri-message').textillate({
+    $('.siri-msg').textillate({
         loop: true,
         sync: true,
         in: {
@@ -40,11 +40,11 @@ $(document).ready(function () {
 
     // mic button click event
 
-    $("#MicBtn").click(function () { 
-        eel.playAssistantSound()
+    $(".MicButton").click(function(){
+        eel.play_sound()
         $("#Oval").attr("hidden", true);
         $("#SiriWave").attr("hidden", false);
-        eel.allCommands()()
+        
     });
 
 
@@ -52,7 +52,7 @@ $(document).ready(function () {
         // this would test for whichever key is 40 (down arrow) and the ctrl key at the same time
 
         if (e.key === 'j' && e.metaKey) {
-            eel.playAssistantSound()
+            eel.play_sound()
             $("#Oval").attr("hidden", true);
             $("#SiriWave").attr("hidden", false);
             eel.allCommands()()

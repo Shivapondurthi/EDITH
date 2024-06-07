@@ -207,3 +207,7 @@ body{
 .sirimsg{
   font-size: clamp(28px);
 }
+
+.edith{
+  color: rgb(241, 237, 237);
+}
