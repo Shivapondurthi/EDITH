@@ -41,9 +41,10 @@ $(document).ready(function () {
     // mic button click event
 
     $("#micbutton").click(function(){
-        // eel.play_sound()
+        eel.play_sound()
         $("#Oval-Section").attr("hidden", true);
         $("#SiriWave-Section").attr("hidden", false);
+        eel.takecommand()()
         console.log("printing")
         
     });

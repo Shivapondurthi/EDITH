@@ -84,9 +84,9 @@ body{
 #TextInput {
     background-color: #181818a8;
     border-color: blue;
-    box-shadow: 0 0 20px rgb(25, 0, 255),
+    box-shadow: 0 0 20px rgb(9, 255, 0),
       inset 0 0 0px rgb(25, 0, 255);
-    border-radius: 8px;
+    border-radius: 50p;
     color: white;
     padding: 3px 0px 3px 20px;
     margin: 0px 20%;
@@ -103,9 +103,9 @@ body{
   
   
   .glow-on-hover {
-    width: 35px;
-    height: 35px;
-    border: none;
+    width: 70px;
+    height: 70px;
+  
     outline: none;
     color: #fff;
     background: #111;
@@ -210,4 +210,12 @@ body{
 
 .edith{
   color: rgb(241, 237, 237);
+}
+
+
+
+.micbutton{
+  width: 70px;
+  height:60px;
+  border-radius:50px;
 }
