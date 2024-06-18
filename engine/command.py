@@ -16,7 +16,7 @@ def speak(text):
      engine.runAndWait()
      
 
-speak("hello")
+
 #speak function using uk accent
 # speak command
 # def speak(command):
@@ -37,14 +37,14 @@ def takecommand():
         r.pause_threshold=1
         r.adjust_for_ambient_noise(Source)
 
-        audio=r.listen(Source,10,10)
+        audio=r.listen(Source,10,6)
 
     try:
         print("Recogining...")
         eel.DisplayMessage("Recogizing....")
         query=r.recognize_google(audio,language="en-in")
         print(f"user said:{query}")
-        speak(query)
+        
         eel.DisplayMessage(query)
         time.sleep(5)
         eel.showhood()
@@ -52,8 +52,4 @@ def takecommand():
         return ""
     
     return query.lower()
-
-
-
-
 
