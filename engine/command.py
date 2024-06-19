@@ -3,7 +3,10 @@ import pyttsx3
 from playsound import playsound
 from gtts import gTTS
 import speech_recognition as sr
+import webbrowser
 import time
+import pyautogui
+import subprocess
 
 
 #Speak function using pyttsx3
@@ -27,7 +30,7 @@ def speak(text):
 
 
 #speech_recognizing 
-@eel.expose
+
 def takecommand():
     r=sr.Recognizer()
     with sr.Microphone() as Source:
@@ -48,8 +51,39 @@ def takecommand():
         eel.DisplayMessage(query)
         time.sleep(5)
         eel.showhood()
+
+        
     except Exception as e:
-        return ""
+        return query.lower()
     
     return query.lower()
+
+@eel.expose
+def allCommands():
+        query1=takecommand()
+        print(query1)
+
+        if "open youtube" in query1:
+            speak("Here you go to Youtube\n")
+            webbrowser.open("youtube.com")
+        elif "google" in query1:
+            speak("Here you go to Google\n")
+            webbrowser.open("google.com")
+        elif "open notepad" in query1:
+            speak("here u go to notepad...")
+            subprocess.Popen("notepad.exe")
+
+        elif "screenshot" in query1:
+            speak("ok takeing screenshot")
+            im = pyautogui.screenshot()
+            speak("imagename")
+            saveimg="screenshot"
+            extenion1=".jpg"
+            im.save(saveimg+extenion1)
+            speak("successfully taken scereenshot")
+             
+        
+        
+        else:
+             print("not run")
 
