@@ -45,6 +45,7 @@ $(document).ready(function () {
     $("#micbutton").click(function(){
         if (i==0){
             eel.play_sound()
+            i+=1
         }
         $("#Oval-Section").attr("hidden", true);
         $("#SiriWave-Section").attr("hidden", false);

@@ -1,13 +1,3 @@
-/*global jQuery */
-/*!	
-* FitText.js 1.1
-*
-* Copyright 2011, Dave Rupert http://daverupert.com
-* Released under the WTFPL license 
-* http://sam.zoy.org/wtfpl/
-*
-* Date: Sun May 05 14:23:00 2024 -0600
-*/
 
 (function( $ ){
 	

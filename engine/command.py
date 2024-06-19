@@ -35,7 +35,7 @@ def speak(text):
 def takecommand():
     r=sr.Recognizer()
     with sr.Microphone() as Source:
-        speak("Hello, I am Edith....")
+        speak("Hello, I am coral....")
         print("listening....")
         eel.DisplayMessage("Listening....")
         r.pause_threshold=1
