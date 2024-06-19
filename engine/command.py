@@ -104,9 +104,9 @@ def allCommands():
              from engine.features import chatBot
              chat1=chatBot(query1)
              chat1=str(chat1)
+             eel.DisplayMessage(chat1)
              print(chat1)
              speak(chat1)
-             eel.DisplayMessage(chat1)
 
 
         time.sleep(8)
