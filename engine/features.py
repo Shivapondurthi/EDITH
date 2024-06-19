@@ -5,7 +5,7 @@ import webbrowser
 import os
 import subprocess
 import wikipedia
-from engine.command import speak
+from engine.command import speak,takecommand
 from engine.config import ASSISTANT_NAME
 #starting sound of EDITH
 
@@ -103,3 +103,6 @@ def senoritava():
         elif "open clock" in query:
             speak("opening clock...")
             subprocess.Popen("clock.exe")
+        else:
+            speak("cannot understand")
+        
