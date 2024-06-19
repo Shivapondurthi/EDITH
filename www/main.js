@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    let i=0;
+
     $('.heading').textillate({
         loop: true,
         sync: true,
@@ -41,7 +43,9 @@ $(document).ready(function () {
     // mic button click event
 
     $("#micbutton").click(function(){
-        eel.play_sound()
+        if (i==0){
+            eel.play_sound()
+        }
         $("#Oval-Section").attr("hidden", true);
         $("#SiriWave-Section").attr("hidden", false);
         

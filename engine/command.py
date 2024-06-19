@@ -6,6 +6,7 @@ import speech_recognition as sr
 import webbrowser
 import time
 import pyautogui
+import os
 import subprocess
 
 
@@ -49,8 +50,7 @@ def takecommand():
         print(f"user said:{query}")
         
         eel.DisplayMessage(query)
-        time.sleep(5)
-        eel.showhood()
+        
 
         
     except Exception as e:
@@ -64,9 +64,11 @@ def allCommands():
         print(query1)
 
         if "open youtube" in query1:
+            eel.DisplayMessage("Here you go to Youtube")
             speak("Here you go to Youtube\n")
             webbrowser.open("youtube.com")
         elif "google" in query1:
+            eel.DisplayMessage("Here you go to Google")
             speak("Here you go to Google\n")
             webbrowser.open("google.com")
         elif "open notepad" in query1:
@@ -81,9 +83,32 @@ def allCommands():
             extenion1=".jpg"
             im.save(saveimg+extenion1)
             speak("successfully taken scereenshot")
+
+        elif "open microsoft word" in query1:
+            speak("here u go to microsoft word...")
+            wordPath = "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word.lnk"
+            os.startfile(wordPath)
+
+        elif "open calculator" in query1:
+            speak("here u go to calculator...")
+            subprocess.Popen("calc.exe") 
+        
+        elif "open clock" in query1:
+            speak("opening clock...")
+            subprocess.Popen("clock.exe")
+        
              
         
         
         else:
-             print("not run")
+             from engine.features import chatBot
+             chat1=chatBot(query1)
+             chat1=str(chat1)
+             print(chat1)
+             speak(chat1)
+             eel.DisplayMessage(chat1)
+
+
+        time.sleep(8)
+        eel.showhood()
 
